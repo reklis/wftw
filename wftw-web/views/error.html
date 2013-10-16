@@ -1,0 +1,32 @@
+<% include ../common/base-header.html %>
+
+<style>
+h1 { margin-top: 0px;}
+</style>
+
+<div><p>&nbsp;</p></div>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3">
+
+			<div class="panel panel-warning">
+				<div class="panel-heading">Error</div>
+				<div class="panel-body">
+					<h1><%= type %> <small>Not found.</small></h1>
+					<hr />
+					<p>The path <code><a href="<%= url %>"><%= url %></a></code> could not be resolved. Please try again, or contact your administrator.</p>
+					<hr />
+					<p>
+						<a href="javascript:window.history.go(-1)" class="btn btn-warning">
+							<span class="batchicon batchicon_296"></span>
+							Back
+						</a>
+					</p>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<% include ../common/base-footer.html %>

@@ -1,0 +1,268 @@
+html {
+	height: 100%;
+	position: relative;
+}
+body {
+	height: 100%;
+	box-shadow: inset 0 0 150px rgba(0,0,0,0.2);
+	/*font-family: 'titilliumlight', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+	font-size: 14px;
+	background-color: #f1f0f0;
+}
+h1, h2, h3, h4, h5, h6 {
+	/*font-family: 'titilliumlight', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+}
+h1 { font-size: 48px; }
+h2 { font-size: 36px; }
+h3 { font-size: 28px; }
+h4 { font-size: 24px; }
+h5 { font-size: 18px; }
+h6 { font-size: 15px; }
+strong {
+	/*font-family: 'titilliumboldupright', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+	font-weight: normal; /* firefox tends to apply a faux bold */
+}
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -20px;
+	padding: 0 0 20px;
+}
+.required { color: #f00; }
+.btn { color: #fff; }
+.color0 { background: #ed393e; }
+.color0a { background: #ce252a; }
+.color1 { background: #ffbf1f; color: #652; }
+.color1a { background: #eaac10; color: #652; }
+.color2 { background: #fff146; color: #652; }
+.color2a { background: #edde2b; color: #652; }
+.color3 { background: #abe319; color: #362; }
+.color3a { background: #9ad402; color: #362; }
+.color4 { background: #00c481; }
+.color4a { background: #0ab279; }
+.color5 { background: #45a4e1; }
+.color5a { background: #2d95d8; }
+.color6 { background: #0d2040; }
+.color6a { background: #19335f; }
+.color7 { background: #203353; }
+.color7a { background: #3b4d6b; }
+.color8 { background: #485b7b; }
+.color8a { background: #304569; }
+.color9 { background: #d3e3ff; color: #229; }
+.color9a { background: #bcd4fe; color: #229; }
+.primary-1 { background: #104BA9 }
+.primary-2 { background: #284A7E }
+.primary-3 { background: #052D6E }
+.primary-4 { background: #447BD4 }
+.primary-5 { background: #6A93D4 }
+.secondary-a-1 { background: #3016B0 }
+.secondary-a-2 { background: #3C2D84 }
+.secondary-a-3 { background: #190773 }
+.secondary-a-4 { background: #624AD8 }
+.secondary-a-5 { background: #8170D8 }
+.secondary-b-1 { background: #00A287 }
+.secondary-b-2 { background: #1E796A }
+.secondary-b-3 { background: #006957 }
+.secondary-b-4 { background: #34D0B6 }
+.secondary-b-5 { background: #5ED0BD }
+.complement-1 { background: #FFA200 }
+.complement-2 { background: #BF8B30 }
+.complement-3 { background: #A66A00 }
+.complement-4 { background: #FFBA40 }
+.complement-5 { background: #FFCC73 }
+.panel {
+	box-shadow: 
+		0 5px 15px rgba(0,0,0,0.1),
+		0 3px 7px rgba(0,0,0,0.1);
+}
+.headerlink a {
+	color: #a6a6a2 !important;
+}
+.headerlink a:hover {
+	color: #0fa0bb !important;
+	text-decoration: none !important;
+}
+.secondary-global-nav {
+	position: fixed;
+	top: 80px;
+	left: 0px;
+	width: 100%;
+	background: rgba(0,0,0,0.8);
+	padding: 0;
+	text-align: right;
+	z-index: 999
+}
+.global-footer {
+	position: fixed;
+	left: 0px;
+	width: 100%;
+	bottom: 0px;
+	padding: 10px 0;
+	background: #222;
+	font-size: 11px;
+	color: #a6a6a2;
+	height: 35px;
+}
+.global-footer a {
+	color: #a6a6a2;
+}
+.global-footer a:hover {
+	color: #0fa0bb;
+	text-decoration: none;
+}
+.logo img {
+	display: inline-block;
+	height: 50px;
+	margin: 15px 0;
+	width: auto;
+}
+.hero {
+	position: relative;
+	height: 600px;
+	min-height: 350px;
+	max-height: 600px;
+	margin-top: -80px;
+	overflow: hidden;
+	/*background-image: url(../images/banners/hero.jpg);
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;*/
+}
+.hero .item {
+	width: 100%;
+	height: 600px;
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.hero .row {
+	margin-top: 150px;
+}
+.hero h1 {
+	text-shadow: 0px 1px 3px rgba(0,0,0,1);
+}
+.bannertext {
+	color: #fff;
+	background: rgba(0,0,0,.5);
+	border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	padding: 15px;
+}
+.module {
+	padding: 20px 0;
+}
+small .btn {
+	margin-top: -15px;
+}
+.news-item h5 {
+	color: #2d95d8;
+	text-decoration: underline;
+}
+.dropdown-menu {
+	background: rgba(50,50,50,0.9);
+	box-shadow: 0px 10px 25px rgba(0,0,0,0.9);
+}
+.dropdown-menu li a {
+	color: #fff;
+}
+.dropdown-menu .divider {
+	background-color: rgba(255,255,255,0.1);
+}
+.form-register button[type="submit"] {
+	margin-bottom: 10px;
+}
+.form-change-password button[type="submit"] {
+	margin-bottom: 10px;
+}
+.form-update-account button[type="submit"] {
+	margin-bottom: 10px;
+}
+.form-signin .checkbox {
+	margin-bottom: 10px;
+}
+.form-signin .checkbox {
+	font-weight: normal;
+}
+.form-signin .form-control {
+	position: relative;
+	padding: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+ 	box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+.form-signin input[type="email"] {
+	margin-bottom: -1px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+.form-signin .link {
+	display: block;
+	min-height: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	vertical-align: middle;
+}
+#main {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.headerimage {
+	border-radius: 4px 4px 0px 0px;
+	-webkit-border-radius: 4px 4px 0px 0px;
+	-moz-border-radius: 4px 4px 0px 0px;
+}
+.headerimage img {
+	border-radius: 4px 4px 0px 0px;
+	-webkit-border-radius: 4px 4px 0px 0px;
+	-moz-border-radius: 4px 4px 0px 0px;
+	width: 100%;
+	height: auto;
+	vertical-align: middle;
+	border: 0;
+}
+.maincontent {
+	padding: 15px 10px 5px 10px;
+	border-bottom: 2px solid #ddd;
+	border-radius: 0px 0px 4px 4px;
+	-webkit-border-radius: 0px 0px 4px 4px;
+	-moz-border-radius: 0px 0px 4px 4px;
+}
+.vendorlisting {
+	padding: 10px 0px 10px 0px;
+	border: 1px solid #ddd;
+	border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+}
+.vendorlisting .title {
+	border-bottom: 1px solid #ddd;
+	padding: 0px 5px 0px 5px;
+}
+.vendorlisting .listing {
+	padding: 5px 5px 0px 5px;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+- See more at: http://avexdesigns.com/responsive-youtube-embed/#sthash.uhwIYszs.dpuf

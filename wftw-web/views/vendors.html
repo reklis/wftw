@@ -1,0 +1,55 @@
+<% include ../common/header.html %>
+
+<% var viewName = 'Vendors' %>
+
+<title><%= viewName %></title>
+
+<div id="#wrap">
+	<div id="main" class="container">
+		<div class="row">
+			<div class="col-sm-8" style="margin-bottom:15px">
+				<div class="row headerimage">
+					<img src="/static/wftw/images/vendors.jpg" height="200" alt="Vendors" />
+				</div>
+				<div class="primary-1 row" style="color:#fff;">
+					<div class="col-sm-12">
+						<h2>Vendor Info</h2>
+					</div>
+				</div>
+				<div class="primary-1 row" style="color:#fff;">
+					<div class="col-sm-1">
+						<a href="/vendors/application" class="btn color5">Sign Up</a>
+					</div>
+				</div>
+				<div class="module primary-1 row maincontent" style="color:#fff;padding-bottom:10px;">
+					<div class="col-sm-5" style="background: rgba(255,255,255,0.3)">
+						<h4>Selection</h4>
+						<p>Vendors will be selected based on sales category, and there will be only one vendor per category.</p>
+					</div>
+					<div class="col-sm-5 col-sm-offset-2" style="background: rgba(255,255,255,0.3)">
+						<h4>Event Details</h4>
+						<p>To see this year's event information visit the event link<br><a href="/2013/event" class="btn secondary-b-1 btn-sm">2013 Event</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3 col-sm-offset-1" style="margin-bottom:15px">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" style="font-size:14px;"><b>2013 Christmas Bazaar Vendors</b></h3>
+					</div>
+					<ul class="list-group" style="font-size:12px;">
+						<% if (typeof vendors !== "undefined" && vendors && vendors.length > 0) { %>
+							<% _.each(vendors, function (vendor) { %>
+						<li class="list-group-item"><%- vendor.businessname %> (<em><%- vendor.firstname %> <%- vendor.lastname %></em>)</li>
+							<% }); %>
+						<% } else { %>
+						<li class="list-group-item">No Vendors Found</li>
+						<% } %>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include ../common/footer.html %>

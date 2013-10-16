@@ -1,0 +1,98 @@
+<% include ../../common/header.html %>
+
+<% var viewName = 'Vendor Registration' %>
+
+<title><%= viewName %></title>
+
+<div class="container">
+	<div class="page-header first-ph swift_fadeable">
+		<h1>
+			<%= viewName %>
+			<small></small>
+		</h1>
+		<p></p>
+	</div>
+	<script type="text/javascript">
+		function calculateTotal() {
+			$('#totaldue').val($('#requestedspacecount').val()*20);
+		}
+		$(document).ready(function() {
+		    calculateTotal();
+		});
+	</script>
+	<form class="form-register" role="form" action="/vendorregistration" method="post" style="margin-bottom:46px">
+		<% if (typeof validationerror !== "undefined" && validationerror) { %>
+		<span class="label label-danger"><%= validationerror -%></span>
+		<% } %>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+					<label for="businessname"><span class="required">*</span>Business Name</label>
+					<input type="text" class="form-control" id="businessname" name="businessname" required></input>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="firstname"><span class="required">*</span>Contact First Name</label>
+					<input type="text" class="form-control" id="firstname" name="firstname" placeholder="Joe" required></input>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="lastname"><span class="required">*</span>Contact Last Name</label>
+					<input type="text" class="form-control" id="lastname" name="lastname" placeholder="Smith" required></input>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="phone"><span class="required">*</span>Phone Number</label>
+					<input type="tel" class="form-control" id="phone" name="phone" required></input>
+				</div>
+			</div>
+			<div class="col-sm-6 col-sm-offset-3">
+				<div class="form-group">
+					<label for="email"><span class="required">*</span>Email</label>
+					<input type="email" class="form-control" id="email" name="email" placeholder="jsmith@example.com" required></input>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="form-group">
+					<label for="description"><span class="required">*</span>Business Description</label>
+					<textarea type="text" class="form-control" id="description" name="description" rows="3" required></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="requestedspacecount"><span class="required">*</span>Number of Spaces Requested</label>
+					<input type="number" class="form-control" id="requestedspacecount" name="requestedspacecount" min="1" max="10" value="1" required onchange="calculateTotal()"></input>
+					<small>$20.00 per space</small>
+				</div>
+			</div>
+			<div class="col-sm-2 pull-right">
+				<div class="form-group">
+					<label for="totaldue">Total Due</label>
+					<div class="input-group">
+						<span class="input-group-addon">$</span>
+						<input type="text" class="form-control" id="totaldue" readonly></input>
+						<span class="input-group-addon">.00</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-2 pull-right">
+				<button class="btn btn-lg btn-primary btn-block primary-1" type="submit">Sign Up</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+<% include ../../common/footer.html %>

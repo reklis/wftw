@@ -1,0 +1,118 @@
+<% include ../common/header.html %>
+
+<title>Home | Water For The World</title>
+
+<script>
+$(document).ready(function() {
+	$('#hero').carousel({
+		interval: 6000
+	});
+});
+</script>
+
+<div id="hero" class="carousel slide hero">
+	<ol class="carousel-indicators">
+		<li data-target="#hero" data-slide-to="0" class="active"></li>
+		<li data-target="#hero" data-slide-to="1"></li>
+		<li data-target="#hero" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner">
+		<div class="item active" style="background-image: url(static/wftw/images/banners/hero.jpg);">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<h2><div class="bannertext">Almost a billion people on the planet don’t have access to clean drinking water</div></h2>
+					</div>
+					<div class="col-sm-2">
+						<a href="http://player.vimeo.com/video/7070167?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=true" id="homeVid1">
+							<img src="static/wftw/images/watch-the-video-summer.png" width="170" height="118" alt="Water For Life" />
+						</a>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<div class="item " style="background-image: url(static/wftw/images/banners/2.jpg);">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<h2><div class="bannertext">Around 700,000 children die every year from diarrhea caused by unsafe water and poor sanitation<div></h2>
+					</div>
+					<div class="col-sm-2">
+						<a href="http://player.vimeo.com/video/7070167?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=true" id="homeVid1">
+							<img src="static/wftw/images/watch-the-video-summer.png" width="170" height="118" alt="Water For Life" />
+						</a>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<div class="item " style="background-image: url(static/wftw/images/banners/1.jpg);">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<h2><div class="bannertext">We are here to help aliviate the worldwide need for clean water</div></h2>
+					</div>
+					<div class="col-sm-2">
+						<a href="http://player.vimeo.com/video/7070167?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=true" id="homeVid1">
+							<img src="static/wftw/images/watch-the-video-summer.png" width="170" height="118" alt="Water For Life" />
+						</a>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+	<a class="left carousel-control" href="#hero" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	<a class="right carousel-control" href="#hero" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+<div class="primary-1">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2 style="color:#fff;">Who Are We?</h2>
+				<p style="color:#fff;">We are a group of people who just want to see life flourish throughout the world.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="module secondary-a-2">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-10">
+				<h2 style="color:#fff;">This Years Event</h2>
+				<p style="color:#fff;">Check out this years event to get more information as well as see who will be there.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-2">
+				<form class="form-inline" style="margin-bottom:25px" role="form" style="margin-top: 25px" action="/vendorpreregister" method="post">
+					<div class="form-group">
+					</div>
+					<a href="/2013/event" class="btn secondary-b-1 btn-lg">Event Info</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="module complement-2">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-10">
+				<h2 style="color:#fff;">Vendor Registration</h2>
+				<p style="color:#fff;">Join now to participate in this winter's event. Vendors will be selected based on sales category, and only one vendor per category will be allowed.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-2">
+				<form class="form-inline" style="margin-bottom:25px" role="form" style="margin-top: 25px" action="/vendorpreregister" method="post">
+					<div class="form-group">
+					</div>
+					<a href="/vendors/application" class="btn secondary-b-1 btn-lg">Sign up</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include ../common/footer.html %>

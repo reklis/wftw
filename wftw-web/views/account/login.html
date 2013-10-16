@@ -1,0 +1,31 @@
+<% include ../../common/header.html %>
+
+<% var viewName = 'Sign In' %>
+
+<title><%= viewName %></title>
+
+<div class="container">
+	<div class="page-header first-ph swift_fadeable">
+		<h1>
+			<%= viewName %>
+			<small></small>
+		</h1>
+		<p></p>
+	</div>
+	<div class="row">
+		<form class="form-signin" role="form" action="/register" method="post">
+			<input type="email" class="form-control" name="username" placeholder="Email" autofocus>
+			<input type="password" class="form-control" name="password" placeholder="Password">
+			<label class="checkbox">
+				<input type="checkbox" name="rememberme" value="remember-me"> Remember me
+			</label>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+			<label class="link">
+				<a href="/register">Don't have an account yet?</a>
+			</label>
+		</form>
+		
+	</div>
+</div>
+
+<% include ../../common/footer.html %>

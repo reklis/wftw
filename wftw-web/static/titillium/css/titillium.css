@@ -1,0 +1,61 @@
+/* titillium font */
+@font-face {
+	font-family: 'titilliumlight';
+	src: url('../fonts/titillium/titillium-light-webfont.eot');
+	src: url('../fonts/titillium/titillium-light-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/titillium/titillium-light-webfont.woff') format('woff'),
+		 url('../fonts/titillium/titillium-light-webfont.ttf') format('truetype'),
+		 url('../fonts/titillium/titillium-light-webfont.svg#titilliumlight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'titilliumlight';
+		src: url('../fonts/titillium/titillium-light-webfont.svg') format('svg');
+
+	}
+}
+
+
+@font-face {
+	font-family: 'titilliumthin';
+	src: url('../fonts/titillium/titillium-thin-webfont.eot');
+	src: url('../fonts/titillium/titillium-thin-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/titillium/titillium-thin-webfont.woff') format('woff'),
+		 url('../fonts/titillium/titillium-thin-webfont.ttf') format('truetype'),
+		 url('../fonts/titillium/titillium-thin-webfont.svg#titilliumthin') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'titilliumthin';
+		src: url('../fonts/titillium/titillium-thin-webfont.svg') format('svg');
+
+	}
+}
+
+
+
+
+
+@font-face {
+	font-family: 'titilliumboldupright';
+	src: url('../fonts/titillium/titillium-boldupright-webfont.eot');
+	src: url('../fonts/titillium/titillium-boldupright-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/titillium/titillium-boldupright-webfont.woff') format('woff'),
+		 url('../fonts/titillium/titillium-boldupright-webfont.ttf') format('truetype'),
+		 url('../fonts/titillium/titillium-boldupright-webfont.svg#titilliumboldupright') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'titilliumboldupright';
+		src: url('../fonts/titillium/titillium-boldupright-webfont.svg') format('svg');
+
+	}
+}

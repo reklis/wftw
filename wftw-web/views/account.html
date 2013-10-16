@@ -1,0 +1,128 @@
+<% include ../common/header.html %>
+
+<% var viewName = 'Account Home' %>
+
+<title><%= viewName %></title>
+
+<style>
+body {
+	padding-top: 0px;
+}
+.page {
+	-webkit-transform: translate3d(0, 0, 0); 
+	-moz-transform: translate3d(0, 0, 0); 
+	-ms-transform: translate3d(0, 0, 0); 
+	transform: translate3d(0, 0, 0);
+	-webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	transition: all 0.25s;
+	cursor: pointer;
+	position: relative;
+	opacity: 0.7;
+}
+.page h4 {
+	display: block;
+	position: absolute;
+	left: 23px;
+	text-align: center;
+	font-size: 18px;
+	bottom: -25px;
+}
+.page .batchicon {
+	-webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	transition: all 0.25s;
+	width: 32%;
+	height: auto;
+	opacity: 0.8;
+	font-size: 48px
+}
+.page:hover {
+	text-decoration: none;
+	opacity: 1;
+}
+.page.na, .page.na:hover {
+	background-color: rgba(255,255,255,0.5);
+	opacity: 0.5;
+	cursor: default;
+}
+.page.na:hover img {
+	opacity: 0.7;
+}
+hr {
+	border: none;
+	border-bottom: 1px dotted rgba(255,255,255,1);
+	border-top: 2px dotted rgba(0,0,0,0.3);
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+.bgcolor0 {
+	background-color: rgba(255,255,255,0.9);
+	color: #444;
+}
+.result:hover {
+	//background-color: rgba(220,220,220,0.5);
+}
+</style>
+
+<div class="container">
+	<div class="page-header first-ph swift_fadeable">
+		<h1>
+			<%= viewName %>
+			<small></small>
+		</h1>
+	</div>
+	<div class="row">
+		<div class="col-xs-18 col-sm-8 col-md-8 col-md-offset-2 col-sm-offset-2">
+			<h4>Build your profile</h4>
+			<form class="form-inline" role="form" action="javascript:void(0);" id="searchForm" name="searchForm" method="post" onSubmit="search(); return false;">
+				<div class="input-group">
+					<input type="text" class="form-control" id="searchInput" placeholder="Search for a company" autofocus>
+					<span class="input-group-btn">
+						<button class="btn btn-primary" type="submit">Search</button>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="row" style="height:40px;"></div>
+	<div class="row" id="results"></div>
+</div>
+<script>
+	function search(terms) {
+		var $results = $('#results')
+			$searchInput = $('#searchInput');
+
+		$results.empty();
+		getSearchResults($searchInput.val(), function (err, data)  {
+			if (!_.isUndefined(err) && !_.isNull(err)) {
+				$results.append('<p>' + err + '</p>');
+			} else {
+				var x = '';
+				_.each(data, function(result) {
+					x = '	<div class="row swift_fadeable result">' +
+								'<div class="col-sm-2 swift_fadeable">' +
+									'<h3 style="text-align: right">' + result.name + '</h3>' +
+									'<p style="text-align: right">' + result.type + '</p>' +
+								'</div>' +
+								'<div class="col-sm-10 swift_fadeable">' +
+									'<div class="col-sm-10">' +
+										'<p>' + result.description + '</p>' +
+									'</div>' +
+									'<div class="col-sm-2">' +
+										'<a href="/home" class="col-sm-2 page bgcolor0">' +
+											'<div class="batchicon batchicon_298"></div>' +
+											'<h4>Add</h4>' +
+										'</a>' +
+									'</div>' +
+								'</div>' +
+							'</div>' +
+							'<hr>';
+					$results.append(x);
+				});
+			}
+		});
+	}
+</script>
+
+<% include ../common/footer.html %>

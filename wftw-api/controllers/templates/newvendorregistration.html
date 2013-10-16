@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title><%= subject %></title>
+    <style type="text/css">
+      /* Client-specific Styles */
+      #outlook a{padding:0;} /* Force Outlook to provide a "view in browser" button. */
+      .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+      
+      /* Reset Styles */
+      body{margin:0; padding:0;}
+      img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+      table, td{border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;}
+      #bodyTable{height:100% !important; margin:0; padding:0; width:100% !important;}
+      h3{color:#606060;display:block;font-family:Helvetica;font-size:16px;font-style:normal;font-weight:bold;line-height:100%;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;text-align:left}
+      #templateHeader{background:rgba(34,34,34,0.9);background-color:rgba(34,34,34,0.9);border-top:0;border-bottom:0}
+      .headerContent{color:#505050;font-family:Helvetica;font-size:20px;font-weight:bold;line-height:100%;padding-top:20px;padding-right:0;padding-bottom:20px;padding-left:0;text-align:left;vertical-align:middle}
+      .headerContent a:link,.headerContent a:visited,.headerContent a .yshortcuts{color:#26abe2;font-weight:normal;text-decoration:underline}
+      #templateBody{background-color:#fff;border-top:0;border-bottom:0;padding:20px}
+      .bodyContent{color:#505050;font-family:Helvetica;font-size:13px;line-height:150%;text-align:left}
+      .bodyContent a:link,.bodyContent a:visited,.bodyContent a .yshortcuts{color:#26abe2;font-weight:normal;text-decoration:underline}
+      .bodyContent img{display:inline;height:auto;max-width:600px}
+      body,#bodyTable{background-color:#fff}
+      #templateFooter{border-top:0;padding:20px}
+      .footerContent{background-color:#222;color:#a6a6a2;font-family:Helvetica;font-size:11px;line-height:150%;text-align:center}
+      .footerContent a{color:#a6a6a2;}
+      .footerContent a:hover {color: #0fa0bb;text-decoration: none;}
+      @media only screen and (max-width:480px){
+        body,table,td,p,a,li,blockquote{-webkit-text-size-adjust:none !important}
+        body{width:100% !important;min-width:100% !important}
+        td[id="templateBody"],td[id="templateFooter"]{padding-right:10px !important;padding-left:10px !important}
+        table[class="templateContainer"]{max-width:600px !important;width:100% !important}
+        h1{font-size:28px !important;line-height:100% !important}
+        h2{font-size:24px !important;line-height:100% !important}
+        h3{font-size:20px !important;line-height:100% !important}
+        h4{font-size:16px !important;line-height:100% !important}
+        img[id="headerImage"]{height:auto !important;max-width:233px !important;width:100% !important}
+        .headerContent{font-size:21px !important;line-height:150% !important;padding-top:20px !important;padding-right:10px !important;padding-bottom:20px !important;padding-left:10px !important}
+        .bodyContent{font-size:17px !important;line-height:150% !important}
+      	.footerContent{font-size:13px !important;line-height:150% !important}
+      	td[class="footerContent"] a{display:block !important}
+      }
+    </style>
+  </head>
+  <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+    <center>
+      <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+        <tr>
+          <td align="center" valign="top">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td align="center" valign="top">
+                  <!-- // BEGIN HEADER -->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td align="center" valign="top" id="templateHeader">
+                        <table border="0" cellpadding="0" cellspacing="0" width="600" class="templateContainer">
+                          <tr>
+                            <td class="headerContent">
+                              <img src="http://www.waterftw.org/static/wftw/images/logos/logo-white.png" style="max-width:600px;" class="logo" id="headerImage">
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- END HEADER \\ -->
+                </td>
+              </tr>
+              <tr>
+                <td align="center" valign="top">
+                  <!-- // BEGIN BODY -->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td align="center" valign="top" id="templateBody">
+                        <table border="0" cellpadding="0" cellspacing="0" width="600" class="templateContainer">
+                          <tr>
+                            <td valign="top" class="bodyContent">
+                              <h1>New Vendor Registration</h1>
+                              <h3>Vendor Information</h3>
+                              <ul style="list-style-type:none">
+                                <li>Business Name: <%= businessname %></li>
+                                <li>Contact Name: <%= name %></li>
+                                <li>Email: <%= email %></li>
+                                <li>Phone: <%= phone %></li>
+                                <li>Business Description: <%= description %></li>
+                                <li>Requested Number of Spaces: <%= requestedspacecount %></li>
+                                <li>Cost per Space: $<%= amountperspace %></li>
+                                <li>Total Cost: $<%= total %></li>
+                                <li>Registration Time: <%= created %></li>
+                              </ul>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- END BODY \\ -->
+                </td>
+              </tr>
+              <tr>
+                <td align="center" valign="top">
+                  <!-- // BEGIN FOOTER -->
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td align="center" valign="top" id="templateFooter" style="padding-bottom:40px;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
+                          <tr>
+                            <td valign="top" class="footerContent">
+                              <p><em>Copyright &copy; 2013 Water for the World, All rights reserved.</em></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- END FOOTER \\ -->
+                </td>
+              </tr>
+            </table>
+            <!-- END TEMPLATE SECTIONS \\ -->
+          </td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>
