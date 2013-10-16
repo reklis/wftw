@@ -1,0 +1,10 @@
+{
+  "name": "wftw-gateway",
+  "description": "WFTW Gateway",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "express": "3.4.0",
+    "http-proxy": "0.10.3"
+  }
+}
