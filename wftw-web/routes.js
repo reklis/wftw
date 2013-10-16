@@ -19,8 +19,8 @@ module.exports = function (server) {
 	}));
 
 	server.get('/admin', auth.ensureAuthenticated, auth.ensureAdmin, admin.dashboard);
-	server.get('/achome', auth.ensureAuthenticated, index.achome);
-
+	
+	server.get('/2013/vendors', index.eventvendors);
 	server.get('/vendors', index.vendors);
 	server.post('/vendorregistration', index.vendorregistration);
 
