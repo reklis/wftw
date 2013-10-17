@@ -1,2 +1,10 @@
 .sass-cache
 node_modules
+public/css
+public/css-min
+public/js/deps.js
+public/js/deps.min.js
+public/js/page.min.js
+public/js/page.js
+public/js/client-template.js
+.DS_Store
