@@ -12,6 +12,21 @@ function ControllerCRUD(name) {
 	entityname = name;
 }
 
+ControllerCRUD.prototype.model = function () {
+	return db;
+};
+
+ControllerCRUD.prototype.validate = function (obj, validator, cb) {
+	var validationmessage = validator(obj);
+
+	if (validationmessage !== null) {
+		console.log(validationmessage);
+		return cb(new restify.InvalidArgumentError(validationmessage));
+	} else {
+		return cb();
+	}
+};
+
 // class methods
 ControllerCRUD.prototype.get = function (id, cb) {
 	if (!id) {
