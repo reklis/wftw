@@ -70,11 +70,11 @@ module.exports = function(grunt) {
         tasks: ['compass']
       },
       pagedeps: {
-        files: ['public/js/deps/**/*.js'],
+        files: ['public/js/deps/**/*.js', 'public/js/client-template.js'],
         tasks: ['concat:pagedeps', 'uglify:pagedeps']
       },
       page: {
-        files: ['public/js/client-template.js', 'public/js/page/**/*.js'],
+        files: ['public/js/page/**/*.js'],
         tasks: ['concat:page', 'uglify:page']
       }
     }
