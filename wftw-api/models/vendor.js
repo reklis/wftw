@@ -1,3 +1,5 @@
+/*global require, module */
+
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema,
 	VendorSchema = new Schema({

@@ -1,9 +1,9 @@
+/*global require, exports, console */
+
 var _ = require('underscore'),
 	config = require('../config'),
-	db = require('../models/mongo-vendor-data'),
 	fs = require('fs'),
 	mandrill = require('node-mandrill')('veieGeiDRIWb7OOry8vGag'),
-	responseHelper = require('./responseHelper'),
 	restify = require('restify'),
 	ControllerCRUD = require('./controller-crud'),
 	VendorControllerCRUD = new ControllerCRUD('vendor');
@@ -54,7 +54,7 @@ exports.get = function (req, res, next) {
 			return res.json(ret);
 		}
 	});
-}
+};
 
 exports.getAll = function (req, res, next) {
 	VendorControllerCRUD.getAll(function (ret) {
@@ -64,7 +64,7 @@ exports.getAll = function (req, res, next) {
 			return res.json(ret);
 		}
 	});
-}
+};
 
 exports.add = function (req, res, next) {
 	VendorControllerCRUD.add({
@@ -93,7 +93,7 @@ exports.add = function (req, res, next) {
 					google_analytics_campaign: 'message.vendorsignup@waterftw.org',
 					html: getSignupEmailText(ret.data)
 				}
-			}, function(err, response) {
+			}, function(err/*, response*/) {
 				if (err) {
 					console.log(JSON.stringify(err));
 				}
@@ -109,7 +109,7 @@ exports.add = function (req, res, next) {
 					subject: 'WaterFTW | New Vendor Registration',
 					html: getNotificationEmailText(ret.data)
 				}
-			}, function(err, response) {
+			}, function(err/*, response*/) {
 				if (err) {
 					console.log(JSON.stringify(err));
 				}
@@ -117,7 +117,7 @@ exports.add = function (req, res, next) {
 			return res.json(ret);
 		}
 	});
-}
+};
 
 exports.update = function (req, res, next) {
 	VendorControllerCRUD.update(req.params.id, {
@@ -136,7 +136,7 @@ exports.update = function (req, res, next) {
 			return res.json(ret);
 		}
 	});
-}
+};
 
 exports.remove = function (req, res, next) {
 	VendorControllerCRUD.remove(req.params.id, function (ret) {
@@ -146,4 +146,5 @@ exports.remove = function (req, res, next) {
 			return res.json(ret);
 		}
 	});
-}
+};
+

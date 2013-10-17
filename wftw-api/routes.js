@@ -1,6 +1,9 @@
-var restify = require('restify'),
+/*global module, require */
+
+var
 	accounts = require('./controllers/account'),
-	vendors = require('./controllers/vendor');
+	vendors = require('./controllers/vendor')
+;
 
 module.exports = function (server) {
 	server.get('/api', function (req, res, next) {
