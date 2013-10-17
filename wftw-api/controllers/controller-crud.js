@@ -1,8 +1,11 @@
-var _ = require('underscore'),
+/*global require, module */
+
+var
 	responseHelper = require('./responseHelper'),
 	restify = require('restify'),
 	db = null,
-	entityname = 'entity';
+	entityname = 'entity'
+;
 
 function ControllerCRUD(name) {
 	db = require('../models/mongo-' + name + '-data');
@@ -24,7 +27,7 @@ ControllerCRUD.prototype.get = function (id, cb) {
 			}
 		});
 	}
-}
+};
 
 ControllerCRUD.prototype.getAll = function (cb) {
 	db.getAll(function (err, entities) {
@@ -34,11 +37,11 @@ ControllerCRUD.prototype.getAll = function (cb) {
 			cb(responseHelper.okResponse('Successfuly got all ' + entityname + 's', entities));
 		}
 	});
-}
-	
+};
+
 ControllerCRUD.prototype.add = function(obj, validator, cb) {
 	var validationmessage = validator(obj);
-	
+
 	if (validationmessage !== null) {
 		return cb(new restify.InvalidArgumentError(validationmessage));
 	} else {
@@ -50,7 +53,7 @@ ControllerCRUD.prototype.add = function(obj, validator, cb) {
 			}
 		});
 	}
-}
+};
 
 ControllerCRUD.prototype.update = function(id, obj, validator, cb) {
 	var validationmessage = validator(obj);
@@ -69,7 +72,7 @@ ControllerCRUD.prototype.update = function(id, obj, validator, cb) {
 			}
 		});
 	}
-}
+};
 
 ControllerCRUD.prototype.remove = function (id, cb) {
 	if (!id) {
@@ -85,6 +88,6 @@ ControllerCRUD.prototype.remove = function (id, cb) {
 			}
 		});
 	}
-}
+};
 
 module.exports = ControllerCRUD;
