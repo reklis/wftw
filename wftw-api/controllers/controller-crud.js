@@ -40,7 +40,7 @@ ControllerCRUD.prototype.add = function(obj, validator, cb) {
 	var validationmessage = validator(obj);
 	
 	if (validationmessage !== null) {
-		return next(new restify.InvalidArgumentError(validationmessage));
+		return cb(new restify.InvalidArgumentError(validationmessage));
 	} else {
 		db.add(obj, function (err, entity) {
 			if (err) { // Error condition
@@ -58,7 +58,7 @@ ControllerCRUD.prototype.update = function(id, obj, validator, cb) {
 	if (!id) {
 		cb(new restify.InvalidArgumentError('Invalid id'));
 	} else if (validationmessage !== null) {
-		return next(new restify.InvalidArgumentError(validationmessage));
+		return cb(new restify.InvalidArgumentError(validationmessage));
 	} else {
 		obj.id = id;
 		db.update(obj, function(err, entity) {
