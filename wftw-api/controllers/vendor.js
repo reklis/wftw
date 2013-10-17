@@ -28,6 +28,16 @@ function vendorValidator(obj) {
 	}
 }
 
+function vendorContributionValidator (obj) {
+	if (!obj) {
+		return 'invalid object';
+	} else if (!obj.totalsales) {
+		return 'Must provide a value for totalsales'
+	} else {
+		return null;
+	}
+}
+
 function getSignupEmailText(v) {
 	var contents = fs.readFileSync('./controllers/templates/vendorregistrationsuccess.html').toString();
 	v.amountperspace = v.amountperspace.toFixed(2);
@@ -138,6 +148,44 @@ exports.update = function (req, res, next) {
 	});
 };
 
+
+exports.updateContributions = function (req, res, next) {
+	// yeah, I don't like how this fits here either
+
+	var
+		contribution_update = {
+			id: req.params.id,
+			totalsales: req.params.totalsales,
+			contributionpercentage: req.params.contributionpercentage
+		}
+	;
+
+	VendorControllerCRUD.validate(
+		contribution_update,
+		vendorContributionValidator,
+		function (validation_error) {
+			if (validation_error) {
+
+				next(validation_error);
+
+			} else {
+
+				VendorControllerCRUD.model().updateContributions(
+					contribution_update,
+					function (update_error, update_result) {
+						if (update_error) {
+							return next(update_error);
+						} else {
+							return res.json(update_result);
+						}
+					}
+				);
+
+			}
+		}
+	);
+};
+
 exports.remove = function (req, res, next) {
 	VendorControllerCRUD.remove(req.params.id, function (ret) {
 		if (typeof ret == restify.InternalError || typeof ret == restify.InvalidArgumentError || typeof ret == restify.ResourceNotFoundError) {
@@ -147,4 +195,3 @@ exports.remove = function (req, res, next) {
 		}
 	});
 };
-

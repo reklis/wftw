@@ -20,7 +20,9 @@ module.exports = function (server) {
 			'GET     /api/vendors',
 			'PUT     /api/vendors',
 			'POST    /api/vendors/:id',
-			'DELETE  /api/vendors/:id'
+			'DELETE  /api/vendors/:id',
+			'GET     /api/vendors/contributions',
+			'POST    /api/vendors/:id/contributions'
 		];
 		res.set('Content-Type', 'text/plain');
 		res.send(200, routes.join('\n'));
@@ -40,4 +42,6 @@ module.exports = function (server) {
 	server.put('/api/vendors', vendors.add);
 	server.post('/api/vendors/:id', vendors.update);
 	server.del('/api/vendors/:id', vendors.remove);
+
+	server.post('/api/vendors/:id/contributions', vendors.updateContributions);
 };

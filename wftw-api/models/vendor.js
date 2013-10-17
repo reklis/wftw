@@ -20,6 +20,14 @@ var mongoose = require('mongoose'),
 		created: {
 			type: Date,
 			default : Date.now
+		},
+		totalsales: {
+			type: Number,
+			default: 0
+		},
+		contributionpercentage: {
+			type: Number,
+			default: 0.1
 		}
 	});
 

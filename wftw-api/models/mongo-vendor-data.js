@@ -1,5 +1,9 @@
-var _ = require('underscore'),
-	Vendor = require('./vendor');
+/*global require, module, console */
+
+var
+	mongoose = require('mongoose'),
+	Vendor = require('./vendor')
+;
 
 module.exports = {
 
@@ -81,6 +85,42 @@ module.exports = {
 		});
 	},
 
+	updateContributions: function (obj, cb) {
+		console.log(obj);
+
+		Vendor.findById(
+			new mongoose.Types.ObjectId(obj.id),
+			function (find_error, vendor) {
+				if (find_error) {
+					console.error(find_error);
+					cb(find_error);
+				} else {
+					if (!vendor) {
+						cb(new Error('vendor not found: ' + obj.id));
+					} else {
+
+						if ('undefined' !== typeof(obj.contributionpercentage)) {
+							vendor.contributionpercentage = obj.contributionpercentage;
+						}
+
+						vendor.totalsales = obj.totalsales;
+
+						vendor.save(function (save_error, save_result) {
+							if (save_error) {
+								console.error('Failed to update vendor contributions');
+								cb(save_error);
+							} else {
+								console.log(save_result);
+								cb(null, save_result);
+							}
+						});
+
+					}
+				}
+			}
+		);
+	},
+
 	// Remove a vendor
 	remove: function (id, cb) {
 		Vendor.findByIdAndRemove(id, function (err, vendor) {
@@ -96,4 +136,4 @@ module.exports = {
 		});
 	}
 
-}
+};
