@@ -1,5 +1,5 @@
 {
-  "min_js": true,
-  "min_css": true,
+  "min_js": false,
+  "min_css": false,
   "api_root": "http://localhost:4243/api/"
 }

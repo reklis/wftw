@@ -19,11 +19,11 @@ module.exports = function(grunt) {
 
     concat: {
       pagedeps: {
-        src: ['public/js/deps/**/*.js'],
+        src: ['public/js/deps/**/*.js', 'public/js/client-template.js'],
         dest: 'public/js/deps.js'
       },
       page: {
-        src: ['public/js/client-template.js', 'public/js/page/**/*.js'],
+        src: ['public/js/page/**/*.js'],
         dest: 'public/js/page.js'
       }
     },
@@ -44,12 +44,14 @@ module.exports = function(grunt) {
         options: {
           sassDir: 'sass',
           cssDir: 'public/css-min',
+          outputStyle: 'compressed'
         }
       },
       dev: {
         options: {
           sassDir: 'sass',
-          cssDir: 'public/css'
+          cssDir: 'public/css',
+          outputStyle: 'nested'
         }
       }
     },
@@ -73,7 +75,7 @@ module.exports = function(grunt) {
       },
       page: {
         files: ['public/js/client-template.js', 'public/js/page/**/*.js'],
-        tasks: ['concat:pagedeps', 'uglify:pagedeps']
+        tasks: ['concat:page', 'uglify:page']
       }
     }
   });
