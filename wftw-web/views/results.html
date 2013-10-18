@@ -1,0 +1,123 @@
+
+<% if (chrome) { %>
+<% include ../common/header.html %>
+<% } else { %>
+<% include ../common/base-header.html %>
+<% } %>
+
+<script src="/static/holder/holder.js"></script>
+
+<script>
+  Holder.add_theme("dark", {background:"#000", foreground:"#aaa", size:11, font: "Monaco"});
+</script>
+
+<style>
+  body {
+    box-shadow: none;
+  }
+
+  .current-contributions {
+    line-height: 200%;
+  }
+
+  .twitter-wall {
+    text-align: center;
+  }
+
+  .twitter-timeline {
+  }
+  
+  .counter-icons {
+    text-align: right;    
+    position: relative;
+    top: 30px;
+  }
+
+  .counter-description {
+    text-align: center;
+    height: 150px;
+  }
+</style>
+
+<h1 class="current-contributions text-center">Current Contributions: <strong>$123,456</strong></h1>
+
+<div class="row">
+
+  <div class="col-sm-4">
+    <div class="row">
+      <div class="col-xs-1"></div>
+      <div class="col-xs-11 twitter-wall">
+        <a class="twitter-timeline" href="https://twitter.com/search?q=%23waterftw"
+          data-widget-id="391029177308033024">Tweets about "#waterftw"</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-8">
+  
+    <div class="row">
+      <div class="col-xs-8 counter-icons">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+      </div>
+      <div class="col-xs-4 counter-description">
+        <img src="holder.js/100x100" alt="">
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-xs-8 counter-icons">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+      </div>
+      <div class="col-xs-4 counter-description">
+        <img src="holder.js/100x100" alt="">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-8 counter-icons">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+      </div>
+      <div class="col-xs-4 counter-description">
+        <img src="holder.js/100x100" alt="">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-8 counter-icons">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+        <img src="holder.js/44x44" alt="">
+      </div>
+      <div class="col-xs-4 counter-description">
+        <img class="img-circle" src="holder.js/100x100" alt="">
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<% if (chrome) { %>
+<% include ../common/footer.html %>
+<% } else { %>
+<% include ../common/base-footer.html %>
+<% } %>

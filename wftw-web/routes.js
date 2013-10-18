@@ -1,6 +1,7 @@
 var admin = require('./modules/admin'),
 	auth = require('./modules/auth'),
 	index = require('./modules/index'),
+	results = require('./modules/results'),
 	passport = require('passport');
 
 module.exports = function (server) {
@@ -23,6 +24,9 @@ module.exports = function (server) {
 	server.get('/2013/vendors', index.eventvendors);
 	server.get('/vendors', index.vendors);
 	server.post('/vendorregistration', index.vendorregistration);
+
+	server.get('/results', results.web);
+	server.get('/big/results', results.big);
 
 	// Catch everything else
 	server.get('*', function (req, res) {
