@@ -2,12 +2,51 @@
 
 module.exports = function(grunt) {
 
+  'use strict';
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
     jshint: {
-      server: ['Gruntfile.js', 'app.js', 'routes/**/*.js'],
-      client: ['public/js/page/**/*.js']
+      options: {
+        'curly'   : true,
+        'eqeqeq'  : true,
+        'forin'   : true,
+        'immed'   : true,
+        'indent'  : 2,
+        'latedef' : true,
+        'newcap'  : true,
+        'noarg'   : true,
+        'noempty' : true,
+        'nonew'   : true,
+        'plusplus': false,
+        'quotmark': 'single',
+        'undef'   : true,
+        'unused'  : true,
+        'strict'  : true,
+        'trailing': true,
+        'maxdepth': 5,
+        'maxlen'  : 100,
+        'laxbreak': true,
+        'onevar'  : true
+      },
+      server: {
+        options: {
+          node: true,
+        },
+        files: {
+          src: ['Gruntfile.js', 'app.js', 'lib/**/*.js', 'routes/**/*.js']
+        }
+      },
+      client: {
+        options: {
+          browser: true
+        },
+        files: {
+          src: ['public/js/page/**/*.js']
+        }
+      }
+      
     },
 
     handlebars: {
@@ -58,7 +97,7 @@ module.exports = function(grunt) {
 
     watch: {
       server: {
-        files: ['Gruntfile.js', 'app.js', 'routes/**/*.js'],
+        files: ['Gruntfile.js', 'app.js', 'lib/**/*.js', 'routes/**/*.js'],
         tasks: ['jshint']
       },
       handlebars: {
