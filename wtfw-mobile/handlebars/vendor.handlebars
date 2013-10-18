@@ -1,8 +1,28 @@
+{{#each vendors}}
+
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">{{ name }}</h3>
+    <h3 class="panel-title">{{ businessname }} <span class="label label-default">{{ eventyear }}</span></h3>
   </div>
   <div class="panel-body">
-    {{ description }}
+
+    <p class="lead">{{ description }}</p>
+
+    <div class="contact-info">
+      <strong class="person-name">{{ firstname }} {{ lastname }}</strong>
+      <a href="mailto:{{ email }}" class="email">{{ email }}</a>
+      <a href="tel:{{ phone }}" class="phone">{{ phone }}</a>
+    </div>
+
+    <p class="totalsales">total sales: <a href="#" class="change-totalsales" data-vendorid="{{ _id }}">{{ totalsales }}</a></p>
+    <p class="contributionpercentage">current contribution: <a href="#" class="change-percentage" data-vendorid="{{ _id }}">{{ formatPercentage contributionpercentage }}</a></p>
+
+    <button class="btn add-1" data-vendorid="{{ _id }}">Add $1</button>
+    <button class="btn add-10" data-vendorid="{{ _id }}">Add $10</button>
+    <button class="btn add-100" data-vendorid="{{ _id }}">Add $100</button>
+    <button class="btn change-totalsales" data-vendorid="{{ _id }}">Custom</button>
+
   </div>
 </div>
+
+{{/each}}

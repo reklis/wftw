@@ -7,7 +7,8 @@
   },
   "dependencies": {
     "express": "3.4.0",
-    "ejs": "*"
+    "ejs": "*",
+    "restify": "~2.6.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
